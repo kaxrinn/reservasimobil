@@ -8,3 +8,4 @@ Route::get('/welcome', function () {
 Route::get('/user/{id}', function ($id) {
     return 'User dengan ID'. $id;
 });
+tes
