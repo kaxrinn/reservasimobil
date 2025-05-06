@@ -1,21 +1,24 @@
-<html>
+<div>
+@extends('layouts.list')
+
+@section('title', 'Ini adalah judul pada meta')
+@section('content')
 <table>
-    <table class="table" border="1">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Nama</th>
-            <th>Harga</th>
+            <th>Produk</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($data as $dataku)
+        @foreach($data as $post)
         <tr>
-            <td>{{ $dataku['id'] }}</td>
-            <td>{{ $dataku['nama'] }}</td>
-            <td>{{ $dataku['harga'] }}</td>
+            <td>{{ $post['id'] }}</td>
+            <td>{{ $post['produk'] }}</td>
+            <!-- Data lainnya -->
         </tr>
         @endforeach
     </tbody>
 </table>
-</html>
+@endsection
+</div>
