@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ListProdukController;
 
 
 Route::get('/', function () {
@@ -16,9 +17,7 @@ Route::get('/listbarang/{id}/{nama}', function($id, $nama){
 });
 Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
 
-Route::get('/home', function () {
-    return view('home');
-});
+
 
 Route::get('/kar', function () {
     return view('kar');
@@ -37,8 +36,7 @@ Route::get('/app', function () {
     return view('layouts.app');
 });
 
-
 Route::get('/list-produk', [ProductController::class, 'index']);
 
-
+Route::get('/listproduk', [ListProdukController::class, 'show']);
 
